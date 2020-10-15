@@ -349,27 +349,29 @@ template {
   height: 50px;
   z-index: 10;
   cursor: pointer;
-  border-radius: 5px;
-  border: 2px solid #6f6f6f;
+  border-radius: 10px;
+  -webkit-box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.8);
+  box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .header__burger:hover {
-  border: 2px solid #00fff1;
+  -webkit-box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.1), inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+  box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.1), inset 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .header__burger span {
   position: absolute;
-  background-color: #6f6f6f;
+  background-color: #00fff1;
   left: 17px;
   width: 34%;
   height: 2px;
-  top: 22px;
+  top: 24px;
 }
 
 .header__burger::before,
 .header__burger::after {
   content: '';
-  background-color: #6f6f6f;
+  background-color: #00fff1;
   position: absolute;
   width: 34%;
   height: 2px;
@@ -400,13 +402,13 @@ template {
 .header__burger.active::before {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: 22px;
+  top: 24px;
 }
 
 .header__burger.active::after {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  bottom: 22px;
+  bottom: 24px;
 }
 
 .header {
@@ -470,7 +472,8 @@ template {
 }
 
 .header__top_descr:hover {
-  color: #ffffff;
+  color: #00fff1;
+  text-shadow: 0 0 5px #00fff1, 0 0 20px #00fff1;
 }
 
 .header__nav {
@@ -537,7 +540,8 @@ template {
 }
 
 .header__social_icon:hover {
-  fill: #ffffff;
+  background-color: #091921;
+  fill: #00fff1;
 }
 
 .main {
@@ -632,7 +636,7 @@ button {
   height: 70px;
   background-color: #091921;
   color: inherit;
-  border-radius: 5px;
+  border-radius: 10px;
   text-align: center;
   line-height: 70px;
   -webkit-box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.8);
