@@ -366,6 +366,8 @@ template {
   width: 34%;
   height: 2px;
   top: 24px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
 }
 
 .header__burger::before,
@@ -381,34 +383,45 @@ template {
 }
 
 .header__burger::before {
-  top: 17px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 24px;
 }
 
 .header__burger::after {
-  bottom: 17px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  bottom: 24px;
 }
 
 .header__burger.active {
   position: fixed;
   top: 1%;
   left: 1%;
+  -webkit-box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.8);
+  box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.header__burger.active:hover {
+  -webkit-box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.1), inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+  box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.1), inset 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .header__burger.active span {
-  -webkit-transform: scale(0);
-  transform: scale(0);
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 
 .header__burger.active::before {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: 24px;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  top: 17px;
 }
 
 .header__burger.active::after {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  bottom: 24px;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  bottom: 17px;
 }
 
 .header {
@@ -430,11 +443,9 @@ template {
   max-width: 500px;
   max-width: 100%;
   min-height: 100%;
-}
-
-.header {
   -webkit-transition: all .3s ease-in-out 0s;
   transition: all .3s ease-in-out 0s;
+  position: fixed;
 }
 
 .header.active {
@@ -601,10 +612,7 @@ body {
   color: #6f6f6f;
   font-weight: 600;
   font-size: 24px;
-}
-
-body.lock {
-  overflow: hidden;
+  background-color: #091921;
 }
 
 summary {
