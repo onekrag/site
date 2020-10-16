@@ -445,7 +445,6 @@ template {
   min-height: 100%;
   -webkit-transition: all .3s ease-in-out 0s;
   transition: all .3s ease-in-out 0s;
-  position: fixed;
 }
 
 .header.active {
@@ -613,6 +612,10 @@ body {
   font-weight: 600;
   font-size: 24px;
   background-color: #091921;
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 summary {
