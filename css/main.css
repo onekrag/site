@@ -345,8 +345,8 @@ template {
   background-color: #091921;
   display: block;
   position: relative;
-  width: 50px;
-  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
   z-index: 10;
   cursor: pointer;
   border-radius: 10px;
@@ -579,9 +579,8 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -591,6 +590,7 @@ template {
   flex-direction: column;
   padding-bottom: 45px;
   padding-top: 60px;
+  border-bottom: 5px solid;
 }
 
 * {
